@@ -5,7 +5,9 @@ def count_words(book_text):
 
 def count_characters(book_text):
     character_counts = {}
-    
+    a = 'a'
+    z = 'z'
+
     for char in book_text:
         lower_char = char.lower()
         # Convert the book text to lowercase for counting
@@ -20,8 +22,12 @@ def count_characters(book_text):
     # Sort the character counts in alphabetical order
        
 def print_report(book_text):
+    character_counts = count_characters(book_text)
+    # Call the function to count characters in the book text
+    character_counts.items()
+## for lower_char in character_counts), reverse=True)
     # Function to print the report of character counts
     
    
 # input = entire book text as string
-# output = dictionary with character counts
+# output = dictionary with character counts"""

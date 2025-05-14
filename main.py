@@ -1,4 +1,4 @@
-from stats import count_words
+from stats import count_words, count_characters, print_report
 
 def get_book_text(book):
     with open(book) as f:
@@ -14,7 +14,9 @@ def main():
     # Call the function to read the book file and store its contents in a variable
     # The function get_book_text takes a file path as input and returns the contents of the file as a string
     # The file path is passed as an argument to the function
-    print(f"{len(count_words(book_text))} words found in the document.")
+    print(f"Found {len(count_words(book_text))} total words.")
+    print(f"{(count_characters(book_text))} characters found in the book.")
+    print(f"{print_report(book_text)}")
     #  print(book_text)
    
 
