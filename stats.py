@@ -18,13 +18,13 @@ def count_characters(book_text):
             else:
                 character_counts[lower_char] = 1
     
-    return sorted(character_counts)
-    # Sort the character counts in alphabetical order
+    return character_counts
+    
        
-def print_report(book_text):
-    character_counts = count_characters(book_text)
-    # Call the function to count characters in the book text
-    character_counts.items()
+def sort_dict(d):
+    return d['num']
+   
+
 ## for lower_char in character_counts), reverse=True)
     # Function to print the report of character counts
     

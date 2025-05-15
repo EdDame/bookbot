@@ -1,4 +1,4 @@
-from stats import count_words, count_characters, print_report
+from stats import count_words, count_characters, sort_dict
 
 def get_book_text(book):
     with open(book) as f:
@@ -14,10 +14,23 @@ def main():
     # Call the function to read the book file and store its contents in a variable
     # The function get_book_text takes a file path as input and returns the contents of the file as a string
     # The file path is passed as an argument to the function
-    print(f"Found {len(count_words(book_text))} total words.")
-    print(f"{(count_characters(book_text))} characters found in the book.")
-    print(f"{print_report(book_text)}")
-    #  print(book_text)
+    character_counts = count_characters(book_text)
+    
+    character_list = []
+    for char, num in character_counts.items():
+        character_list.append({'char':char,'num': num})
+    # Create a list of tuples containing the character and its count        
+    character_list.sort(reverse=True, key=sort_dict)
+    #sorts the tuble list by count (most > least)
+    print(f"""" =========== BOOKBOT ============
+    Analyzing book found at books/frankenstein.txt...
+    ----------- Word Count ----------
+    Found {len(count_words(book_text))} total words.
+    --------- Character Count -------""")
+    for entry in character_list:
+        print(f"{entry['char']}: {entry['num']}")
+    
+    
    
 
 if __name__ == "__main__":
