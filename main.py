@@ -7,7 +7,7 @@ def get_book_text(book):
 # Function to read a book file and return its contents as a string
 # input = book = filepath to book file
 # output = main = contents of file as string
-# I auto-commented the code to explain what it does, I am tired. __name__  has so many comments because it was my first time seeing it.
+
 
 
 def main():
